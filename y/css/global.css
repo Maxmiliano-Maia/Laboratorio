@@ -1,0 +1,596 @@
+/* 2 - Sintaxe */
+@media screen and (max-width: 500px) {
+    h1 {
+        position: relative;
+        top: -450px;
+        left: 0px;
+        width: 100%;
+        text-align: center;
+    }
+    
+    #paragrafo {
+        width: 300px;
+        height: 300px;
+        display: flex;
+        flex-direction: column; /* Coloca os elementos em uma coluna */
+        justify-content: center; /* Centraliza verticalmente */
+        margin: 0 auto;
+        top: 250px;
+        position: relative;
+    }
+
+    body{
+        margin: 500px 0;
+        background: linear-gradient(rgba(156, 174, 163, 1.2), rgba(225, 232, 228, 0.7)), 
+        url('../images/laboratorio.jpg') center/cover no-repeat;
+        background-size: 110%; /* Ajuste o valor para dimensionar a imagem */
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        font-family: Arial, sans-serif;
+    }
+
+    header{
+        text-align: right;
+    }
+    
+    /*so vale p os toes do cabeçalho*/
+    
+    
+    .centralize{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .form-field{
+        margin-bottom: 10px;
+    }
+    
+    /*Botões prenchem todo o espaço da tela*-------------*/
+    
+    input{
+        border: none;
+    }
+    
+    button{
+       margin-bottom: 10px;
+    }
+    
+    input, button,
+    select {
+        padding: 10px;
+        width: -webkit-fill-available;
+          
+    }
+    
+    input[type="radio"]{
+        width: auto;
+    }
+    
+    .loading{
+        background: rgb(0,0,0, 0.5);
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+    }
+    
+    .loading label {
+        font-size: 24px;
+    }
+    
+    
+    .solid{
+        background: white;
+        border: none;
+        color: rgb(57, 67, 57);
+    }
+    
+    .outline{
+        background: transparent;
+        color:rgb(3, 36, 7);
+        border: 1px solid rgb(227, 247, 232);
+    }
+    
+    button:active{
+        opacity: 0.8;
+    }
+    
+    button[disabled]{
+        opacity: 0.7;
+    }
+    
+    button.fab{
+        width: 54px;
+        height: 54px;
+        border-radius: 50px;
+        border: none;
+        font-size: 24px;
+        box-shadow: 2px 2px 2px gray;
+        color:blue;
+    }
+    
+    
+    
+    #game{
+        position: absolute;
+        top: 560px;
+        
+        left: 1200px;
+        width: 54px;
+        height: 54px;
+        border-radius: 50px;
+        border: none;
+        font-size: 24px;
+        box-shadow: 2px 2px 2px gray;
+        background-color: red;
+    }
+    
+    button.fab.fixed{
+        position: fixed;
+    }
+    
+    button.fab.bottom{
+        bottom: 32px;
+    }
+    
+    
+    button.fab.right{
+        right: 32px
+    }
+    
+    #privacidade_button{
+        position: absolute;
+        
+    }
+    
+    main {
+        padding: 20px;
+    }
+    
+    .error{
+        color: rgb(56, 40, 192);
+        background-color: rgb(31, 237, 34);
+        display: none; 
+    }
+    
+    #check{
+       
+        top: 20px;
+        left: 20px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50px;
+        border: none;
+       
+    }
+    
+    .clear{
+        background: transparent;
+        border: none;
+        color: rgb(9, 27, 11);
+    }
+    
+    .mform-field-game1, .form-field-game2 {
+        text-align: center;
+        padding: 50px;
+        background-color: rgba(208, 240, 209, 0.6);
+        border-radius: 10px;
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+        width: 100%;
+        max-height: 700px;
+        margin: 300px auto;
+        box-sizing: border-box;
+        position: relative;
+    }
+    
+    .mform-field-game1:hover, .form-field-game2:hover {
+        transform: translateY(-5px);
+    }
+    
+    .mform-field-game1 a, .form-field-game2 a {
+        text-decoration: none;
+        color: #333;
+    }
+    
+    .mform-field-game1 img, .form-field-game2 img {
+        max-width: 80%;
+        border-radius: 5px;
+    }
+    
+    .mform-field-game1 h2, .form-field-game2 h2 {
+        margin: 10px 0;
+        font-size: 1.5rem;
+    }
+    
+    .mform-field-game1 p, .form-field-game2 p {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+    
+    .container-games {
+        position: relative;
+        top: -700px;
+        align-content: center;
+        left: 0px;
+    }
+    
+    .container {
+        position: relative;
+        top: -800px;
+        display: block;
+    }
+    
+    footer {
+        top: 0px;
+        background-color: rgba(208, 240, 209, 0.6);
+        padding: 10px 0;
+        color: #333;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        border-radius: 10px;
+        position: relative;
+    }
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 0 5px;
+}
+
+/* Estilos para a seção de links */
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section li {
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    text-decoration: none;
+    color: #555;
+}
+
+.footer-section a:hover {
+    color: #333;
+}
+
+/* Estilos para a seção de informações de contato */
+.footer-section p {
+    margin: 10px 0;
+}
+
+/* Estilos para a parte inferior do rodapé */
+.footer-bottom {
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+    font-size: 12px;
+    color: #777;
+}
+
+/* Estilos para links no rodapé */
+.footer-bottom a {
+    color: #777;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    color: #333;
+}
+
+}
+
+@media screen and (min-width: 501px) {
+
+form{
+    width: 300px;
+}
+
+h1 {
+    position: relative;
+    top: -400px; /* Ajusta o deslocamento vertical */
+    width: 80%; /* Largura ocupando 80% da largura da tela */
+    height: 0; /* Não é necessário altura para um título */
+    text-align: center;
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+#paragrafo {
+    width: 100%;
+    top: 15px;
+    position: relative;
+    margin-top: 5%; /* Margem superior em relação à altura da tela */
+    margin-bottom: 5%; /* Margem inferior em relação à altura da tela */
+    margin-left: 20%;
+    align-items: center;
+}
+    
+.mform-field-game1, .form-field-game2 {
+    text-align: center;
+    padding: 50px;
+    background-color: rgba(208, 240, 209, 0.6); /* Aqui, o último valor (0.9) é o canal alfa */
+    border-radius: 10px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    width: 70%;
+    max-height: 1000px;
+    margin: 50px auto; /* Centraliza verticalmente e ajusta margens */
+    box-sizing: border-box;
+    position: relative; 
+}
+
+.mform-field-game1:hover, .form-field-game2:hover {
+    transform: translateY(-5px);
+}
+
+/* Estilo para os links */
+.mform-field-game1 a, .form-field-game2 a {
+    text-decoration: none;
+    color: #333;
+   
+}
+
+/* Estilo para as imagens dos jogos */
+.mform-field-game1 img, .form-field-game2 img {
+    max-width: 80%;
+    border-radius: 5px;
+}
+
+/* Estilo para os títulos dos jogos */
+.mform-field-game1 h2, .form-field-game2 h2 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+}
+
+/* Estilo para as descrições dos jogos */
+.mform-field-game1 p, .form-field-game2 p {
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+
+.container-games {
+    top: -400px;
+    align-content: center;
+    position: relative;
+}
+
+.container{
+        position: relative;
+        top: -200px;
+        display: block;
+}
+
+
+footer {
+    top: 100px;
+    background-color: rgba(208, 240, 209, 0.6); /* Aqui, o último valor (0.9) é o canal alfa */
+    padding: 20px 0;
+    color: #333;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 0 15px;
+}
+
+/* Estilos para a seção de links */
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section li {
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    text-decoration: none;
+    color: #555;
+}
+
+.footer-section a:hover {
+    color: #333;
+}
+
+/* Estilos para a seção de informações de contato */
+.footer-section p {
+    margin: 10px 0;
+}
+
+/* Estilos para a parte inferior do rodapé */
+.footer-bottom {
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+    font-size: 12px;
+    color: #777;
+}
+
+/* Estilos para links no rodapé */
+.footer-bottom a {
+    color: #777;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    color: #333;
+    
+}
+
+body{
+    margin: 500px 0;
+    background: linear-gradient(rgba(156, 174, 163, 1.2), rgba(225, 232, 228, 0.7)), 
+    url('../images/laboratorio.jpg') center/cover no-repeat;
+    background-size: 110%; /* Ajuste o valor para dimensionar a imagem */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+header{
+    text-align: right;
+}
+
+/*so vale p os toes do cabeçalho*/
+
+
+.centralize{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-field{
+    margin-bottom: 10px;
+}
+
+/*Botões prenchem todo o espaço da tela*-------------*/
+
+input{
+    border: none;
+}
+
+button{
+   margin-bottom: 10px;
+}
+
+input, button,
+select {
+    padding: 10px;
+    width: -webkit-fill-available;
+      
+}
+
+input[type="radio"]{
+    width: auto;
+}
+
+.loading{
+    background: rgb(0,0,0, 0.5);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+
+.loading label {
+    font-size: 24px;
+}
+
+
+.solid{
+    background: white;
+    border: none;
+    color: rgb(57, 67, 57);
+}
+
+.outline{
+    background: transparent;
+    color:rgb(3, 36, 7);
+    border: 1px solid rgb(227, 247, 232);
+}
+
+button:active{
+    opacity: 0.8;
+}
+
+button[disabled]{
+    opacity: 0.7;
+}
+
+button.fab{
+    width: 54px;
+    height: 54px;
+    border-radius: 50px;
+    border: none;
+    font-size: 24px;
+    box-shadow: 2px 2px 2px gray;
+    color:blue;
+}
+
+
+
+#game{
+    position: absolute;
+    top: 560px;
+    
+    left: 1200px;
+    width: 54px;
+    height: 54px;
+    border-radius: 50px;
+    border: none;
+    font-size: 24px;
+    box-shadow: 2px 2px 2px gray;
+    background-color: red;
+}
+
+button.fab.fixed{
+    position: fixed;
+}
+
+button.fab.bottom{
+    bottom: 32px;
+}
+
+
+button.fab.right{
+    right: 32px
+}
+
+#privacidade_button{
+    position: absolute;
+    
+}
+
+main {
+    padding: 20px;
+}
+
+.error{
+    color: rgb(56, 40, 192);
+    background-color: rgb(31, 237, 34);
+    display: none; 
+}
+
+#check{
+   
+    top: 20px;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    border: none;
+   
+}
+
+.clear{
+    background: transparent;
+    border: none;
+    color: rgb(9, 27, 11);
+}
+
+}

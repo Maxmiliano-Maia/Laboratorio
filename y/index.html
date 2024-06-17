@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--passo1-Configuração de media query-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="google-site-verification" content="ksk1tM80H_prwwO68av_7YYhXP648kIhyFcyM75IOf0" />
+    <title>O Laboratório de Max</title>
+    <meta name="description" content="Bem-vindo ao Laboratório de Max. Explore projetos, jogos educativos e o aplicativo 'Controle Orçamentário'. Faça login ou acesse nossos jogos.">
+    <meta name="keywords" content="O Laboratório de Max, projetos, jogos educativos, Controle Orçamentário">  
+    <link rel="icon" type="image/webp" href="favicon.webp">
+   
+</head>
+
+<body class="centralize">
+    <H1>O Laboratório de Max</H1>
+    <div class="container-games">
+        
+        <div id="paragrafo">
+            <p>Bem-vindo ao <strong>Laboratório de Max</strong>!</p> 
+            <p>Espaço dedicado à divulgação dos diversos PROJETOS  criados pelo Programador Maxmiliano Maia <a href="https://curriculo-max-maia.web.app/">👤</a>.<br>
+            Aqui você encontra uma variedade de Projetos 🔬, incluindo JOGOS EDUCATIVOS e SOLUÇÕES para o mundo corporativo 💡.<br> 
+            Notável exemplo é o aplicativo "Controle Orçamentário".</p> 
+            Acesse jogos CLICANDO nas imagens abaixo. E faça <a href="#container_login"> Login </a> para acessar o "Controle Orçamentário":</p>
+        </div>
+
+        <div class="mform-field-game1">
+            <a href="Heroi_PC_Android.html">
+                <img src="images/heroi.png" alt="Jogo Herói da Matemática: Aventura Matemática estilo Super Mario">
+            </a>
+            <h2>Herói da Matemática: Jogo de Plataforma</h2>
+            <p>Herói da Matemática: Embarque em uma aventura matemática estilo Super Mario! Torne-se um herói enquanto aprende e se diverte no <strong>Laboratório de Max</strong>.</p>
+        </div>
+        <div class="form-field-game2">
+            <a href="https://jasminematematica.web.app/"> <img src="jasmine.png" alt="Jasmine Matemática: Aprenda Matemática de forma divertida"> </a>
+                
+                <h2>Jasmine Matemática: Aprenda Matemática de Forma Divertida</h2>
+                <p>Aprender Matemática pode ser divertido e emocionante, explore Jasmine Matemática no <strong>Laboratório de Max</strong> e SURPREENDA-SE.</p>
+            
+        </div>
+
+        <div class="form-field-game2">
+            <a href="indexRts.html"> <img src="images/ecomerce.png" alt="Laboratório de Max"> </a>
+                
+                <h2>E-Commerce Mastermind</h2>
+                <p>Bem-vindo ao mundo do E-commerce Mastermind, o jogo que desafia sua habilidade de se tornar um mestre do comércio eletrônico e gestão financeira! Prepare-se para mergulhar em um ambiente virtual repleto de oportunidades de compra e venda, onde cada decisão que você tomar influenciará diretamente no seu sucesso financeiro.
+                Neste emocionante jogo de simulação de negócios, você assumirá o papel de um empreendedor visionário que busca construir um império virtual do comércio eletrônico. Sua tarefa é criar estratégias astutas para comprar produtos de fornecedores, ajustar preços com sabedoria e vender seus produtos para maximizar seus lucros.</p>
+            
+        </div>
+
+        <div class="form-field-game2">
+            <a href="Space_PC_Android.html"> <img src="space.png" alt="Jogo de nave"></a>
+                        
+            <h2>Matemática nas Estrelas</h2>
+            <p>Embarque em uma jornada pelo cosmos com "Matemática nas Estrelas", um jogo educativo de nave projetado para desafiar suas habilidades matemáticas enquanto salva um Baby Allien em perigo no vasto espaço sideral.</p>
+        </div>
+
+        <div class="form-field-game2">
+            <a href="https://maximus-developer.itch.io/batalha-interestelar/download/eyJleHBpcmVzIjoxNzE4NjM4MjkxLCJpZCI6Mjc3NDY3MX0%3d.Y1Y78wnTk9OemruufNlaKiLS2NY%3d"> <img src="Batalha.png" alt="Jogo de nave"></a>
+                        
+            <h2>Batalha Interestelar</h2>
+            <p>É com grande entusiasmo que apresentamos "Batalha Interestelar", um jogo inovador que promete redefinir o gênero de estratégia e aventura espacial. Exibido em diversos eventos de tecnologia e recebendo elogios tanto da crítica especializada quanto do público, "Batalha Interestelar" não é apenas um jogo, mas uma experiência imersiva que atrai jogadores de todas as idades.</p>
+        </div>
+        
+    </div>
+   
+    <div class="container" id="container_login">
+        
+        <form>
+            <div class="form-field">
+                <div><label>Email</label></div>
+                <input type="email" name="email" id="email" onchange="onChangeEmail()" placeholder="seu@email.com"/>
+                <div class="error" id="email-required-error">Email é obrigatório</div>
+                <div class="error" id="email-invalid-error">Email é inválido</div>
+            </div>
+            <div class="form-field">
+                <div><label>Senha</label></div>
+                <input type="password" name="password" id="password" onchange= "onChangePassword()" placeholder="Senha"/>
+                <div class="error" id="password-required-error">Senha é obrigatória</div>
+            </div>
+            <div class="form-actions">
+                <button type="button" class="clear" id="recover-password-button" onclick="recoverPassword()" disabled="true"><b>Recuperar senha</b></button>
+                <button type="button" class="solid" id="login-button" disabled="true" onclick="login()">Entrar</button>
+            </div>
+            <div class="register-link">
+                <p>Ainda não tem uma conta? <button type="button" class="outline" onclick="register()">Registrar</button></p>
+            </div>
+            <input type="checkbox" id="accept_terms"required onchange= "toggleButtonsDisable()" > 
+            <label for="accept_termss">Eu aceito os termos da <a href="pages/privacy/privacy.html">Política de Privacidade</a></label>                                                             
+        </form>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Navegação</h3>
+                <ul>
+                    <li><a href="index.html">Laboratório de Max</a></li>
+                    <li><a href="https://play.google.com/store/apps/details?id=com.heroi.matematica">Herói da Matemática</a></li>
+                    <li><a href="pages/privacy/privacy.html">Política de Privacidade</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Redes Sociais</h3>
+                <ul>
+                    <li><a href="https://www.facebook.com/MaxmilianoMaia/" target="_blank">Facebook</a></li>
+                    <li><a href="https://manutencaocomputadornatal.web.app/" target="_blank">WhatsApp e Serviços</a></li>
+                    <li><a href="https://www.instagram.com/maximusdeveloper/" target="_blank">Instagram</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p>Email: maxmilian20@gmail.com</p>
+                <p>Telefone: </p>(84) 9 8882-9932</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Laboratório de Max. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+
+<link rel="stylesheet" href="css/global.css">
+
+<script type="text/javascript" charset="utf-8" src="./js/script.js" defer></script>
+<script type="text/javascript" charset="utf-8" src="./js/validations.js" defer></script>
+<script type="text/javascript" charset="utf-8" src="./js/loading.js" defer></script>
+
+<script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-auth-compat.js"></script>
+<script src="firebase-init.js"></script>
+
+</html>

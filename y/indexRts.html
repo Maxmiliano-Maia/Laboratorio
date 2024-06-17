@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Escolha seu Personagem</title>
+    <link rel="stylesheet" href="style_game_index.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bem-vindo ao E-commerce Mastermind: Desperte o Gênio dos Negócios!</h1>
+        <p>Você está pronto para se tornar um mestre do comércio eletrônico e da gestão financeira? Se sim, você está prestes a entrar em um mundo virtual cheio de oportunidades de compra e venda, onde cada escolha que você fizer afetará diretamente seu sucesso financeiro.</p>
+        <p>Escolha seu personagem:</p>
+        <div class="personagem">
+            <img src="empresaria2.png" alt="Personagem 1" id="personagem1" data-nome="Ana" onmouseover="exibirNome(this)" onmouseout="esconderNome(this)" onclick="escolherPersonagem(1)">
+            <img src="empresario.png" alt="Personagem 2" id="personagem2" data-nome="Henrique" onmouseover="exibirNome(this)" onmouseout="esconderNome(this)" onclick="escolherPersonagem(2)">
+            <img src="empresario2.png" alt="Personagem 3" id="personagem3" data-nome="Fabio" onmouseover="exibirNome(this)" onmouseout="esconderNome(this)" onclick="escolherPersonagem(3)">
+            <img src="empresaria.png" alt="Personagem 4" id="personagem4" data-nome="Clarisse" onmouseover="exibirNome(this)" onmouseout="esconderNome(this)" onclick="escolherPersonagem(4)">
+            <img src="cadeirante.png" alt="Personagem 5" id="personagem5" data-nome="Percival" onmouseover="exibirNome(this)" onmouseout="esconderNome(this)" onclick="escolherPersonagem(5)">
+        </div>
+        <p id="mensagem">Escolha um personagem para começar o jogo!</p>
+    </div>
+    <script src="script_indexRTS.js"></script>
+</body>
+</html>

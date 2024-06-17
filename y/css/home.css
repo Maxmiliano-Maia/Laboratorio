@@ -1,0 +1,141 @@
+
+
+body{
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #becfbbad;
+    color: #f0e3e3;
+    padding: 10px;
+    text-align: right;
+}
+
+
+ol{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+ol li {
+    cursor: pointer;
+    background: rgb(240, 227, 227);
+    padding: 8px;
+    border-bottom: 1px solid gray;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ol li:hover{
+    opacity: 0.7;
+}
+
+ol li.Despesas{
+    border-left: 10px solid #e74c3c;
+}
+
+ol li.Receitas{
+    border-left: 10px solid #27ae60;
+}
+
+ol li:hover button.danger{
+    display: block;
+   color: red;
+}
+
+button.danger {
+    width: auto;
+    float: right;
+    display: none;
+    border-radius: 10px;
+    background-color: white;
+}
+
+p{
+    margin: 4px 0;
+}
+
+#transaction{
+    margin-top: 20px;
+    background-color: #f0e3e3;
+    padding: 10px;
+    border-bottom: 1px solid gray;
+    cursor: pointer;
+}
+
+#transaction:hover {
+    opacity: 0.7;
+}
+
+.fab-button, .game-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    color:#007bff #f0e3e3;
+    background-color: #007bff;
+    cursor: pointer;
+   
+}
+
+.barra {
+    position: relative; /* Para posicionar elementos filhos dentro da div */
+    height: 20px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: #f0e3e3;/* Vermelho suave com opacidade */
+}
+
+.barra #expense {
+    position: absolute; /* Posição absoluta dentro da div .barra */
+    height: 100%;
+    border-radius: 10px;
+    background-color: #e74c3c; /* Vermelho elegante */
+    
+}
+
+.barra #income {
+    position: absolute; /* Posição absoluta dentro da div .barra */
+    height: 100%;
+    border-radius: 10px;
+    background-color: #27ae60; /* Verde elegante */ 
+}
+
+.status-label {
+    color: black;
+}
+
+.money-icon {
+    display: inline-block;
+    margin-left: 10px; /* Ajuste o espaçamento conforme necessário */
+    font-size: 20px; /* Ajuste o tamanho do ícone conforme necessário */
+    color: black; /* Ajuste a cor do ícone conforme necessário */
+}
+
+.price {
+    color: black;
+    float: left;
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.name {
+    color: black;
+    float: left;
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+#saldo {
+    margin-left: 3px; /* Ajuste o valor conforme necessário */
+}

@@ -1,0 +1,885 @@
+@media screen and (min-width: 100px){
+h1, #mute, #exit {
+  display: inline-block;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: hsl(210, 58%, 88%); 
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-size: 24px;
+  top: 0px;
+  left: 0px;
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  left: 300px;
+  top: 150px;
+  background-size: 100% auto;
+  background-position: -800px center;
+}
+
+#container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('images/fundo.avif');
+  background-size: 100% auto;
+  background-position: -800px center;
+  opacity: 0.7; /* Ajuste a opacidade desejada aqui */
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+#menino, #loja, #worker, #worker2 {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+  display: inline-block;
+}
+
+#container3 {
+  position: relative;
+  left: 0px;
+  top: 0px;
+}
+
+#menino {
+  background-image: url('boy.png');
+  background-size: cover;
+}
+
+#loja {
+  background-image: url('loja.jpg');
+  background-size: no-repeat;
+  left: 300px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+#menino2 {  /* O menino2 Na verdade é o Monstro PapaMoney */
+  position: absolute;
+  transition: transform 0.3s ease-in-out;
+  background-image: url('monster.png');
+  background-size: cover;
+  left: 0px;
+  top: 0px;
+  opacity: 0;
+  width: 100px;
+  height: 100px;
+}
+
+#worker {  /* É a que gira */
+  background-image: url('worker.png');
+  background-size: cover;
+  opacity: 0;
+}
+
+#worker2 { /* É a que fica fixa*/
+  background-image: url('worker.png');
+  background-size: cover;
+  opacity: 0;
+}
+
+#empresario {
+  position: absolute;
+  transition: transform 0.3s ease-in-out;
+  background-image: url('empresario2.png');
+  background-size: cover;
+  left: 20px;
+  top: 20px;
+  width: 100px;
+  height: 90px;
+}
+
+#iphone, #Fone_JBL, #laptop, #caixa_som,
+#batedeira, #bicicleta, #boneco, #cadeira,
+#cadeirinha, #camera, #escultura, #racao,
+#relogio, #suplemento, #bola, #xbox{
+  display: inline-block;
+  width: 50px;
+  height: 70px;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+
+#iphone, #Fone_JBL, #laptop, #caixa_som,
+#batedeira, #bicicleta, #boneco, #cadeira,
+#cadeirinha, #camera, #escultura, #racao,
+#relogio, #suplemento, #bola, #xbox{
+  border: 2px solid solid;
+  cursor: pointer;
+}
+
+/* Adicione essa regra para os elementos com IDs individuais */
+
+.objeto {
+  border: 0px solid;
+  transition: border 0.3s;
+}
+
+.objeto:hover {
+  border: 2px solid brown; /* Ou a cor desejada ao passar o mouse */
+}
+
+/*--É onde ficam todos os produtos --*/
+#container2 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  left: -300px;
+  top: -30px;
+  background-repeat: no-repeat;
+  width: 600px;
+  height: 340px;
+}
+
+#container2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('galpao.jpeg');
+  opacity: 0.5; /* Ajuste a opacidade desejada aqui */
+  border-radius: 4px;
+}
+
+#contas {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  left: 150px;
+  top: 0px;
+  background-repeat: no-repeat;
+  width: 100px;
+  height:100px;
+  opacity: 1;
+}
+
+#energia {
+  transition: transform 0.3s ease-in-out;
+  background-image: url('energia.jpg');
+  background-size: cover;
+  left: 0px;
+  top: -130px;
+  width: 90px;
+  height: 70px;
+  position: relative;
+  opacity: 0;
+}
+
+#iphone {
+  transition: transform 0.3s ease-in-out;
+  background-image: url('images/iphone.png');
+  background-size: cover;
+  left: 130px;
+  width: 55px;
+  top: 10px;
+}
+
+#Fone_JBL {
+  transition: transform 0.3s ease-in-out;
+  background-image: url('images/fone.png');
+  background-size: cover;
+  left: 10px;
+  width: 70px;
+  top: -60px;
+}
+
+#laptop {
+  width: 100px;
+  transition: transform 0.3s ease-in-out;
+  background-image: url('images/Laptop.png');
+  background-size: cover;
+  left: -50px;
+  top: -60px;
+}
+
+#caixa_som {
+  width: 90px;
+  height: 90px;
+  transition: transform 0.3s ease-in-out;
+  background-image: url('images/caixa_som.png');
+  background-size: cover;
+  left: -100px;
+  top: -100px;
+}
+
+#batedeira {
+  transition: transform 0.3s ease-in-out;
+  background-image: url('images/batedeira.png');
+  background-size: cover;
+  left: 10px;
+  top: -45px;
+}
+
+#bicicleta {
+  transition: transform 0.3s ease-in-out;
+  background-image: url('images/bicicleta.png');
+  background-size: cover;
+  left: 10px;
+  width: 110px;
+  top: -10px;
+}
+
+#boneco {
+  transition: transform 0.3s ease-in-out;
+  background-image: url('images/boneco.png');
+  background-size: cover;
+  left: 350px;
+  width: 55px;
+  top: 120px;
+}
+
+#cadeira {
+  transition: transform 0.3s ease-in-out;
+  background-image: url('images/cadeira.png');
+  background-size: cover;
+  left: 70px;
+  top: 130px;
+}
+
+#cadeirinha {
+  transition: transform 0.3s ease-in-out;
+  background-image: url('images/cadeirinha.png');
+  background-size: cover;
+  left: 0px;
+  top: 60px;
+}
+
+#camera {
+  transition: transform 0.3s ease-in-out;
+  background-image: url('images/camera.png');
+  background-size: cover;
+  left: -50px;
+  width: 75px;
+  top: -110px;
+}
+
+#escultura {
+  transition: transform 0.3s ease-in-out;
+  background-image: url('images/escultura.png');
+  background-size: cover;
+  left: 220px;
+  top: 10px;
+}
+
+#racao {
+  transition: transform 0.3s ease-in-out;
+  background-image: url('images/racao.png');
+  background-size: cover;
+  left: 35px;
+  top: 60px;
+}
+
+#relogio {
+  transition: transform 0.3s ease-in-out;
+  background-image: url('images/relogio.png');
+  background-size: cover;
+  left:-30px;
+  top: -110px;
+}
+
+#suplemento {
+  transition: transform 0.3s ease-in-out;
+  background-image: url('images/suplemento.png');
+  background-size: cover;
+  left: -40px;
+  top: 202px;
+}
+
+#bola {
+  transition: transform 0.3s ease-in-out;
+  background-image: url('images/bola.png');
+  background-size: cover;
+  left: 70px;
+  top: 150px;
+  height: 50px;
+}
+
+#xbox {
+  transition: transform 0.3s ease-in-out;
+  background-image: url('images/xbox.png');
+  background-size: cover;
+  left: -60px;
+  top: -100px;
+  width: 90px;
+}
+
+#item {
+  position: relative;
+  top: -10px;
+  left: -100px;
+  font-size: 18px;
+}
+
+#saldo {
+  margin-right: 10px; /* Adicione a margem desejada para criar espaço */
+  font-size: 18px;
+  top: 25px;
+  left: -50px;
+  position: relative;
+}
+
+#totalItens {
+  position: relative;
+  top: -30px;
+  left: 150px;
+  font-size: 18px;
+}
+
+#valorInput {
+  position: relative;
+  top: -55px;
+  left: 20px;
+  font-size: 18px;
+  width: 60px;
+}
+
+#comprar {
+  position: relative;
+  top: -30px;
+  left: 22px;
+  font-size: 18px;
+}
+
+#maquinaEscrever {
+  margin-left: 20px;
+  color: brown;
+  position: relative;
+  left: 300px;
+  top: 150px;
+  font-size: 18px;
+  width: 400px;
+  height: 10px;
+}
+
+#maquinaEscrever2 {
+  margin-left: 20px;
+  color: brown;
+  position: relative;
+  left: 35px;
+  top: -130px;
+  font-size: 18px;
+  width: 400px;
+  height: 10px;
+}
+
+#exit {
+  position: fixed;
+  top: 4%;
+  left: 95%;
+  font-size: 18px;
+  border-radius: 4px;
+  background-color: rgb(225, 155, 105);
+  transform: translateX(-50%);
+}
+
+#mute{
+  position: fixed;
+  background-image: url('audio.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  font-size: 30px;
+  padding: 0px;
+  top: 4%;
+  left: 88%;
+  transform: translateX(-50%);
+  background-color: rgb(205, 155, 105);
+  border-radius: 4px; 
+  width: 50px;
+  height: 29px;
+}
+
+#mensagem {
+  font-size: 18px;
+  top: 250px;
+  left: -320px;
+  opacity: 1;
+  position: relative;
+  color: brown;
+}
+
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 1000px ) and (orientation: landscape){
+
+  h1, #mute, #exit {
+    display: inline-block;
+  }
+  
+  body {
+    margin-left: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200vh;
+    width: -1000px;
+    background-color: hsl(210, 58%, 88%);
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    font-size: 24px;
+    top: 0px;
+    left: 0px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  div {
+    margin: 0;
+    padding: 0;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  #container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    left: 300px;
+    top: 150px;
+    background-size: 100% auto;
+    background-position: -800px center;
+  }
+  
+  #container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/fundo.avif');
+    background-size: 100% auto;
+    background-position: -800px center;
+    opacity: 0.7; /* Ajuste a opacidade desejada aqui */
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+  
+  #menino, #loja, #worker, #worker2 {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+    display: inline-block;
+  }
+  
+  #container3 {
+    position: relative;
+    left: 0px;
+    top: 0px;
+  }
+  
+  #menino {
+    background-image: url('boy.png');
+    background-size: cover;
+  }
+  
+  #loja {
+    background-image: url('loja.jpg');
+    background-size: no-repeat;
+    left: 300px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+  
+  #menino2 {  /* O menino2 Na verdade é o Monstro PapaMoney */
+    position: absolute;
+    transition: transform 0.3s ease-in-out;
+    background-image: url('monster.png');
+    background-size: cover;
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+    width: 100px;
+    height: 100px;
+  }
+  
+  #worker {  /* É a que gira */
+    background-image: url('worker.png');
+    background-size: cover;
+    opacity: 0;
+  }
+  
+  #worker2 { /* É a que fica fixa*/
+    background-image: url('worker.png');
+    background-size: cover;
+    opacity: 0;
+  }
+  
+  #empresario {
+    position: absolute;
+    transition: transform 0.3s ease-in-out;
+    background-image: url('empresario2.png');
+    background-size: cover;
+    left: 20px;
+    top: 20px;
+    width: 100px;
+    height: 90px;
+  }
+  
+  #iphone, #Fone_JBL, #laptop, #caixa_som,
+  #batedeira, #bicicleta, #boneco, #cadeira,
+  #cadeirinha, #camera, #escultura, #racao,
+  #relogio, #suplemento, #bola, #xbox{
+    display: inline-block;
+    width: 50px;
+    height: 70px;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  #iphone, #Fone_JBL, #laptop, #caixa_som,
+  #batedeira, #bicicleta, #boneco, #cadeira,
+  #cadeirinha, #camera, #escultura, #racao,
+  #relogio, #suplemento, #bola, #xbox{
+    border: 2px solid solid;
+    cursor: pointer;
+  }
+  
+  /* Adicione essa regra para os elementos com IDs individuais */
+  
+  .objeto {
+    border: 0px solid;
+    transition: border 0.3s;
+  }
+  
+  .objeto:hover {
+    border: 2px solid brown; /* Ou a cor desejada ao passar o mouse */
+  }
+  
+  /*--É onde ficam todos os produtos --*/
+  #container2 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    left: -300px;
+    top: -200px;
+    background-repeat: no-repeat;
+    width: 600px;
+    height: 340px;
+  }
+  
+  #container2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('galpao.jpeg');
+    opacity: 0.5; /* Ajuste a opacidade desejada aqui */
+    border-radius: 4px;
+  }
+  
+  #contas {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    left: 150px;
+    top: 0px;
+    background-repeat: no-repeat;
+    width: 100px;
+    height:100px;
+    opacity: 1;
+  }
+  
+  #energia {
+    transition: transform 0.3s ease-in-out;
+    background-image: url('energia.jpg');
+    background-size: cover;
+    left: 0px;
+    top: -130px;
+    width: 90px;
+    height: 70px;
+    position: relative;
+    opacity: 0;
+  }
+  
+  #iphone {
+    transition: transform 0.3s ease-in-out;
+    background-image: url('images/iphone.png');
+    background-size: cover;
+    left: 130px;
+    width: 55px;
+    top: 10px;
+  }
+  
+  #Fone_JBL {
+    transition: transform 0.3s ease-in-out;
+    background-image: url('images/fone.png');
+    background-size: cover;
+    left: 10px;
+    width: 70px;
+    top: -60px;
+  }
+  
+  #laptop {
+    width: 100px;
+    transition: transform 0.3s ease-in-out;
+    background-image: url('images/Laptop.png');
+    background-size: cover;
+    left: -50px;
+    top: -60px;
+  }
+  
+  #caixa_som {
+    width: 90px;
+    height: 90px;
+    transition: transform 0.3s ease-in-out;
+    background-image: url('images/caixa_som.png');
+    background-size: cover;
+    left: -100px;
+    top: -100px;
+  }
+  
+  #batedeira {
+    transition: transform 0.3s ease-in-out;
+    background-image: url('images/batedeira.png');
+    background-size: cover;
+    left: 10px;
+    top: -45px;
+  }
+  
+  #bicicleta {
+    transition: transform 0.3s ease-in-out;
+    background-image: url('images/bicicleta.png');
+    background-size: cover;
+    left: 10px;
+    width: 110px;
+    top: -10px;
+  }
+  
+  #boneco {
+    transition: transform 0.3s ease-in-out;
+    background-image: url('images/boneco.png');
+    background-size: cover;
+    left: 350px;
+    width: 55px;
+    top: 120px;
+  }
+  
+  #cadeira {
+    transition: transform 0.3s ease-in-out;
+    background-image: url('images/cadeira.png');
+    background-size: cover;
+    left: 70px;
+    top: 130px;
+  }
+  
+  #cadeirinha {
+    transition: transform 0.3s ease-in-out;
+    background-image: url('images/cadeirinha.png');
+    background-size: cover;
+    left: 0px;
+    top: 60px;
+  }
+  
+  #camera {
+    transition: transform 0.3s ease-in-out;
+    background-image: url('images/camera.png');
+    background-size: cover;
+    left: -50px;
+    width: 75px;
+    top: -110px;
+  }
+  
+  #escultura {
+    transition: transform 0.3s ease-in-out;
+    background-image: url('images/escultura.png');
+    background-size: cover;
+    left: 220px;
+    top: 10px;
+  }
+  
+  #racao {
+    transition: transform 0.3s ease-in-out;
+    background-image: url('images/racao.png');
+    background-size: cover;
+    left: 35px;
+    top: 60px;
+  }
+  
+  #relogio {
+    transition: transform 0.3s ease-in-out;
+    background-image: url('images/relogio.png');
+    background-size: cover;
+    left:-30px;
+    top: -110px;
+  }
+  
+  #suplemento {
+    transition: transform 0.3s ease-in-out;
+    background-image: url('images/suplemento.png');
+    background-size: cover;
+    left: -40px;
+    top: 202px;
+  }
+  
+  #bola {
+    transition: transform 0.3s ease-in-out;
+    background-image: url('images/bola.png');
+    background-size: cover;
+    left: 70px;
+    top: 150px;
+    height: 50px;
+  }
+  
+  #xbox {
+    transition: transform 0.3s ease-in-out;
+    background-image: url('images/xbox.png');
+    background-size: cover;
+    left: -60px;
+    top: -100px;
+    width: 90px;
+  }
+  
+  #item {
+    position: relative;
+    top: -10px;
+    left: -100px;
+    font-size: 18px;
+  }
+  
+  #saldo {
+    margin-right: 10px; /* Adicione a margem desejada para criar espaço */
+    font-size: 18px;
+    top: 25px;
+    left: -50px;
+    position: relative;
+  }
+  
+  #totalItens {
+    position: relative;
+    top: -30px;
+    left: 150px;
+    font-size: 18px;
+  }
+  
+  #valorInput {
+    position: relative;
+    top: -55px;
+    left: 20px;
+    font-size: 18px;
+    width: 60px;
+  }
+  
+  #comprar {
+    position: relative;
+    top: -30px;
+    left: 22px;
+    font-size: 18px;
+  }
+  
+  #maquinaEscrever {
+    margin-left: 20px;
+    color: brown;
+    position: relative;
+    left: 300px;
+    top: 150px;
+    font-size: 18px;
+    width: 400px;
+    height: 10px;
+  }
+  
+  #maquinaEscrever2 {
+    margin-left: 20px;
+    color: brown;
+    position: relative;
+    left: 35px;
+    top: -130px;
+    font-size: 18px;
+    width: 400px;
+    height: 10px;
+  }
+  
+  #exit {
+    position: fixed;
+    top: 4%;
+    left: 95%;
+    font-size: 18px;
+    border-radius: 4px;
+    background-color: rgb(225, 155, 105);
+    transform: translateX(-50%);
+  }
+  
+  #mute{
+    position: fixed;
+    background-image: url('audio.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    font-size: 30px;
+    padding: 0px;
+    top: 4%;
+    left: 88%;
+    transform: translateX(-50%);
+    background-color: rgb(205, 155, 105);
+    border-radius: 4px; 
+    width: 50px;
+    height: 29px;
+  }
+  
+  #mensagem {
+    font-size: 18px;
+    top: 100px;
+    left: -320px;
+    opacity: 1;
+    position: re;
+    color: rgb(184, 79, 79);
+    width: 500px;
+  }
+
+}

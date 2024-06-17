@@ -1,0 +1,40 @@
+
+
+.clear_register{
+    background: transparent;
+    border: none;
+    color: rgb(9, 27, 11);
+    top: -150px;
+    position: relative;
+    left: 350px;
+    font-size: 20px;
+}
+
+.clear_login{
+    background: transparent;
+    border: none;
+    color: rgb(9, 27, 11);
+    top: 0px;
+    position: relative;
+    left: 15px;
+    font-size: 20px;
+}
+
+.form-field{
+    max-width: 300px; /* Ou qualquer largura máxima que você deseje */
+    margin: 0 auto; /* Centraliza o formulário na página */
+    margin-bottom: 20px;
+}
+
+.solid{
+    width: 320px;
+    font-size: 16px; 
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px; /* Ajuste o preenchimento conforme necessário */
+    font-size: 16px; /* Ajuste o tamanho da fonte conforme necessário */
+}
+

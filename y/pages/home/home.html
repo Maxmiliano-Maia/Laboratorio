@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title> Home - Controle de gastos</title>
+</head>
+
+<body>
+    <header>
+        <pre>
+            <p><span class="name">Saldo:</span> <span class="price">R$<span id="saldo"></span></span></p>  
+    </pre>
+        
+         
+            <div class="barra">
+                <div id="expense"></div>
+                <div id="income"></div>  
+            </div>
+          
+        <!--a classe clear retira o fundo do botão-->
+        <button type="button" onclick="logout()">Sair</button>                       
+    </header>
+
+  <ol id="transactions">
+        
+  </ol>
+  <button class="fab fixed bottom right" onclick="newTransaction()">+</button>
+  
+</body>
+
+<link rel="stylesheet" href="../../css/global.css">
+<link rel="stylesheet" href="../../css/global2.css">
+<link rel="stylesheet" href="../../css/home.css">
+
+<script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore-compat.js"></script>
+<script src="../../firebase-init.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/auth-guard.js" defer></script>
+<script type="text/javascript" charset="utf-8" src="../../js/loading.js" defer></script>
+<script type="text/javascript" charset="utf-8" src="../../services/transaction.service.js" defer></script>
+<script type="text/javascript" charset="utf-8" src="../../js/home.js" defer></script>
+
+
+</html>

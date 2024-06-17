@@ -1,0 +1,110 @@
+/* Reset default styles */
+body, ul, ol, li, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header styles */
+
+
+/* Main content styles */
+.centralize {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Form container styles */
+form {
+    width: 100%;
+    max-width: 100%;
+    padding: 30px;
+    border: 1px solid #ccc;
+    background-color: white;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Form field styles */
+.form-field {
+    margin-bottom: 20px;
+}
+
+/* Radio button and label styles */
+[type="radio"] {
+    display: none;
+}
+
+label[for="Despesas"], label[for="Receitas"] {
+    cursor: pointer;
+    margin-right: 15px;
+    padding: 15px 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    font-size: 18px;
+}
+
+#Despesas:checked + label[for="Despesas"] {
+    background-color: #f44336; /* Cor para despesas */
+    color: white;
+}
+
+
+#Receitas:checked + label[for="Receitas"] {
+    background-color: rgb(90, 217, 90) /* Cor para rendimentos */
+   
+}
+
+#delete-button{
+    color: #f44336;
+}
+
+/* Error message styles */
+.error {
+    color: red;
+    font-size: 16px;
+    display: none;
+}
+
+/* Button styles */
+.solid {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 20px 30px;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+/* Responsive button styles */
+
+
+/* Header styles */
+
+
+/* Clear button styles */
+.clear_transaction {
+    background: transparent;
+    border: none;
+    top: 0px;
+    position: relative;
+}
+
+@media screen and (max-width: 1140px) {
+    .clear_transaction {
+        background: transparent;
+        border: none;
+        top: 50px;
+        position: relative;
+        left: -10px;
+    }
+
+
+}

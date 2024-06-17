@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"> 
+    <title>E-Commerce Mastermind</title>
+    <link rel="stylesheet" type="text/css" href="style_game.css"> 
+</head>
+<body>
+    <p id="mensagem">Selecione e compre os produtos abaixo</p>
+    <div class="personagem" id="empresario"></div>
+    <div id = "container3">
+        <h1>E-Commerce Mastermind</h1>
+        <button id="mute"></button>
+        <button id="exit" onclick="logout()">Sair</button>
+    </div>
+    <audio id="myAudio" loop>
+        <source src = 'menu.mp3' type = 'audio/mpeg'>
+        seu navegador não possui suporte ao elemento  audio
+    </audio>
+    <audio id="caixa">
+        <source src = 'caixa.mp3' type = 'audio/mpeg'>
+        seu navegador não possui suporte ao elemento  audio
+    </audio>
+    <div id="saldo">Saldo: 0</div>
+    <p id="maquinaEscrever"></p>
+    <div id="item">Item: </div>
+    <div id="totalItens">total </div>
+    <input type="number" id="valorInput" inputmode="numeric" placeholder="Qtd" oninput="print()"> 
+    <button id="comprar" onclick="efeito()">Comprar</button>
+    <div id="container">
+        <div class="personagem" id="menino"></div>
+        <div class="personagem" id="loja"></div>
+        <div class="personagem" id="worker"></div>
+        <div class="personagem" id="worker2"></div>
+    </div>
+    <div id = "container2">
+        <div  id="iphone" class="objeto" data-nome="Apple iPhone 14 Pro Max: " onmouseover="exibirNome(this)" onmouseout="esconderNome(this)"></div>
+        <div  id="Fone_JBL" class="objeto" data-nome="Fone de Ouvido JBL Quantum 600 Headset: " onmouseover="exibirNome(this)" onmouseout="esconderNome(this)"></div>
+        <div  id="batedeira" class="objeto" data-nome="Batedeira Mondial Prática B-44: " onmouseover="exibirNome(this)" onmouseout="esconderNome(this)"></div>
+        <div  id="bicicleta" class="objeto" data-nome="Bicicleta Aro 29 Ksw XLT: " onmouseover="exibirNome(this)" onmouseout="esconderNome(this)"></div>
+        <div  id="boneco" class="objeto" data-nome="Funko Pop Harry Potter: " onmouseover="exibirNome(this)" onmouseout="esconderNome(this)"></div>
+        <div  id="cadeira" class="objeto" data-nome="Cadeira Gamer Pctop Strike: " onmouseover="exibirNome(this)" onmouseout="esconderNome(this)"></div>
+        <div  id="cadeirinha" class="objeto" data-nome="Styll Baby Cadeira Para Auto: " onmouseover="exibirNome(this)" onmouseout="esconderNome(this)"></div>
+        <div  id="camera" class="objeto" data-nome="Camera Canon EOS Rebel T7: " onmouseover="exibirNome(this)" onmouseout="esconderNome(this)"></div>
+        <div  id="escultura" class="objeto" data-nome="Estátua de Buda Hindu Resina Dourado 19,5cm: " onmouseover="exibirNome(this)" onmouseout="esconderNome(this)"></div>
+        <div  id="laptop" class="objeto" data-nome="Laptop Samsung Book NP550XDA: " onmouseover="exibirNome(this)" onmouseout="esconderNome(this)"></div>
+        <div  id="racao" class="objeto" data-nome="Ração para Raças Pequenas Dog Chow: " onmouseover="exibirNome(this)" onmouseout="esconderNome(this)"></div>
+        <div  id="relogio" class="objeto" data-nome="Relógio Orient Masculino Mgss1199: " onmouseover="exibirNome(this)" onmouseout="esconderNome(this)"></div>
+        <div  id="suplemento" class="objeto" data-nome="Integralmédica NUTRI WHEY PROTEIN: " onmouseover="exibirNome(this)" onmouseout="esconderNome(this)"></div>
+        <div  id="bola" class="objeto" data-nome="Bola de Futsal Penalty Max 1000: " onmouseover="exibirNome(this)" onmouseout="esconderNome(this)"></div>
+        <div  id="xbox" class="objeto" data-nome="Microsoft Xbox One S: " onmouseover="exibirNome(this)" onmouseout="esconderNome(this)"></div>
+        <div  id="caixa_som" class="objeto" data-nome="G Speaker Smart Luminária Caixa De Som: " onmouseover="exibirNome(this)" onmouseout="esconderNome(this)"></div>    
+    </div>
+    <div id="contas">
+        <div  id="energia" class="objeto" data-nome="Conta de Energia" onmouseover="exibirNome(this)" onmouseout="esconderNome(this)"></div>
+        <p id="maquinaEscrever2"></p>
+    </div>
+    <div class="personagem" id="menino2"></div>
+    <script type="text/javascript" src="script_game.js"></script>
+</body>
+</html>
